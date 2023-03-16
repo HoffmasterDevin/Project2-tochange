@@ -1,1 +1,60 @@
-I AM HOME!
+<div class = "user-profile">
+<div class = "card-header">
+{{#if loggedIn}} 
+<div class= "container text-center ">
+
+    <!-- delete mark its just showing current user-->
+ <h2> <strong> Welcome back <mark>{{userName}}</mark> ready to level up? </strong></h2>
+
+ 
+</div >
+
+
+<div class="mainButtons">
+  <div class="row justify-content-center "> 
+    <div class="pull-right col-md-6 col-lg-6 ">
+      <button class="btn btn-primary btn-lg btn-block">
+        <span class="btn-overlay">
+      <img src="https://via.placeholder.com/150" alt="start workout image">
+    </span>
+    Start Workout
+      </button>
+    </div>
+
+    <div class="col-md-6 col-lg-6">
+      <button class="btn btn-primary btn-lg btn-block">
+       <span class="btn-overlay">
+      <img src="https://via.placeholder.com/150" alt="Stats image">
+    </span>
+    Stats
+      </button>
+    </div>
+  </div>
+
+  <div class="row justify-content-center ">
+    <div class="pull-right col-md-6 col-lg-6">
+      <button class="btn btn-primary btn-lg btn-block">
+       <span class="btn-overlay">
+      <img src="https://via.placeholder.com/150" alt="calander image">
+    </span>
+    calander
+      </button>
+    </div>
+
+    <div class="col-md-6 col-lg-6">
+      <button class="btn btn-primary btn-lg btn-block">
+       <span class="btn-overlay">
+      <img src="https://via.placeholder.com/150" alt="profile image">
+    </span>
+    profile
+      </button>
+    </div>
+
+    </div>
+  </div>
+</div>
+{{/if}}
+
+
+</div>
+</div>
