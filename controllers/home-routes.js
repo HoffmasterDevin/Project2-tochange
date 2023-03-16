@@ -1,14 +1,20 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
+const { User } = require('../models');
 
+router.get('/', withAuth, async (req, res) => {
+    // try {
+    //     const user = await User.findOne({
 
-router.get('/', withAuth, (req, res) => {
-    console.log('HOME');
+    //     })
+    // }
+    // console.log('HOME');
+    const userName = req.session.username
     res.render('home', {
-        loggedIn: req.session.loggedIn
-    });
+        loggedIn: req.session.loggedIn,
+        userName 
+     });
 });
-
 router.get('/login', (req, res) => {
     console.log('LOGIN');
     if (req.session.loggedIn) {
@@ -18,5 +24,7 @@ router.get('/login', (req, res) => {
 
     res.render('login');
 });
+
+
 
 module.exports = router;
