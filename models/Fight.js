@@ -15,7 +15,7 @@ Fight.init(
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
-                key: 'id',
+                key: 'user_id',
             },
         },
         date: {
@@ -25,6 +25,10 @@ Fight.init(
             },
         },
         enemy_id: {
+            type: Datatypes.INTEGER,
+            allowNull: false,
+        },
+        current_health: {
             type: Datatypes.INTEGER,
             allowNull: false,
         },
