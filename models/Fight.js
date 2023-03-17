@@ -6,7 +6,7 @@ class Fight extends Model {}
 Fight.init(
     {
         id: {
-            type: Datatypes.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             primarykey: true,
             autoIncrement: true,
@@ -25,19 +25,19 @@ Fight.init(
             },
         },
         enemy_id: {
-            type: Datatypes.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         current_health: {
-            type: Datatypes.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
         defeated: {
-            type: Datatypes.BOOLEAN,
+            type: DataTypes.BOOLEAN,
             defaultValue: false
         },
         ongoing: {
-            type: Datatypes.BOOLEAN,
+            type: DataTypes.BOOLEAN,
             defaultValue: true
         },
     },
@@ -47,7 +47,7 @@ Fight.init(
         freezeTableName: true,
         underscored: true,
         modelName: 'fight'
-      }
+    }
 );
 
 module.exports = Fight;
