@@ -8,7 +8,11 @@ Fight.init(
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
+<<<<<<< HEAD
             primarykey: true,
+=======
+            primaryKey: true,
+>>>>>>> 89da98df5090068094f73a7794d8fabbdc1720b3
             autoIncrement: true,
         },
         user_id: {
@@ -19,10 +23,16 @@ Fight.init(
             },
         },
         date: {
+<<<<<<< HEAD
             type: DataTypes.STRING,
             valitdate: {
                 isDate: true,
             },
+=======
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW
+>>>>>>> 89da98df5090068094f73a7794d8fabbdc1720b3
         },
         enemy_id: {
             type: DataTypes.INTEGER,
