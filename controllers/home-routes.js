@@ -1,20 +1,25 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
-const { User } = require('../models');
+const { User, Fight } = require('../models');
 
 router.get('/', withAuth, async (req, res) => {
-    // try {
-    //     const user = await User.findOne({
-
-    //     })
-    // }
-    // console.log('HOME');
-    const userName = req.session.username
+    try {
+        const userData = await User.findAll({
+            attributes: { exclude: ['password']},
+            order: [['username', 'ASC']]
+        });
+    
+    const users = userData.map((project) => project.get({ plain: true}));
+    console.log(await req.session.loggedIn)
     res.render('home', {
-        loggedIn: req.session.loggedIn,
-        userName 
+        users,
+        loggedIn: req.session.loggedIn, 
      });
+    } catch (err) {
+        res.status(500).json(err);
+    }
 });
+
 router.get('/login', (req, res) => {
     console.log('LOGIN');
     if (req.session.loggedIn) {
