@@ -19,10 +19,9 @@ Fight.init(
             },
         },
         date: {
-            type: DataTypes.STRING,
-            valitdate: {
-                isDate: true,
-            },
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW
         },
         enemy_id: {
             type: DataTypes.INTEGER,
