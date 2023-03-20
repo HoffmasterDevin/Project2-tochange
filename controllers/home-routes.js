@@ -30,6 +30,10 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+router.get('/History', withAuth, async (req, res) => {
+    
+})
+
 
 
 module.exports = router;
