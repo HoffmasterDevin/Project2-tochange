@@ -3,7 +3,7 @@ const { User } = require('../../models');
 
 // CREATE new user
 // eslint-disable-next-line no-use-before-define
-router.post('/', async (req, res) => {
+router.post('/users', async (req, res) => {
   try {
     const dbUserData = await User.create({
       name: req.body.username,
