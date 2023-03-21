@@ -3,7 +3,7 @@ const { User } = require('../../models');
 
 // CREATE new user
 // eslint-disable-next-line no-use-before-define
-router.post('/users', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const dbUserData = await User.create({
       name: req.body.username,
@@ -11,6 +11,7 @@ router.post('/users', async (req, res) => {
       password: req.body.password,
     });
 
+    req.session.user = dbUserData.user_id
     req.session.save(() => {
       req.session.loggedIn = true;
 
@@ -49,7 +50,6 @@ router.post('/login', async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-      req.session.username = dbUserData.name;
       res
         .status(200)
         .json({ user: dbUserData, message: 'You are now logged in!' });
