@@ -1,12 +1,248 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<!-- REMOVE THIS LINE FOR BATTLE SCREEN
     
-</body>
-</html>
+    <link rel="stylesheet" href="./">
+
+  <div class="battle-screen">
+    <div class="player">
+        <img src="photos\photo\buff.png" width="350" height="200" alt="Player Character">
+      <div class="health-bar">
+        <div class="health"></div>
+      </div>
+      <table class="workouts">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Workout</th>
+            <th>Damage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Jan 1, 2023</td>
+            <td>Bench Press</td>
+            <td>100 lbs</td>
+          </tr>
+          <tr>
+            <td>Jan 2, 2023</td>
+            <td>Deadlift</td>
+            <td>200 lbs</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="enemy">
+        <img src="photos\photo\goblin.png" width="350" height="200" alt="Enemy Character">
+      <div class="health-bar">
+        <div class="health"></div>
+      </div>
+      <table class="workouts">
+        <thead>
+          <tr>
+            <th>HP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>40/40</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+CSS \/ \/ \/ FOR BATTLE SCREEN
+
+.battle-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2c3e50;
+}
+
+.player, .enemy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 50px;
+}
+
+.health-bar {
+  position: relative;
+  width: 150px;
+  height: 20px;
+  background-color: #ddd;
+  margin-top: 10px;
+}
+
+.health {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: green;
+  transition: width 0.5s ease;
+}
+
+.enemy .health {
+  background-color: red;
+}
+
+.workouts {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.workouts th, .workouts td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.workouts th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.workouts tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+REMOVE THIS LINE FOR BATTLE SCREEN-->
+
+  
+
+
+<!-- REMOVE THIS FOR TABLE SCREEN
+    <link rel="stylesheet" href="./">
+<table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Workout</th>
+        <th>Time (mins)</th>
+        <th>Damage (lbs)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jan 1, 2023</td>
+        <td>Bench Press</td>
+        <td>60</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td>Jan 3, 2023</td>
+        <td>Deadlift</td>
+        <td>90</td>
+        <td>200</td>
+      </tr>
+      <tr>
+        <td>Jan 5, 2023</td>
+        <td>Squat</td>
+        <td>75</td>
+        <td>150</td>
+      </tr>
+    </tbody>
+  </table> 
+  
+  CSS \/ \/ \/ FOR TABLE SCREEN
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody td:first-child {
+  text-align: left;
+}
+
+tbody td:last-child {
+  font-weight: bold;
+}
+
+REMOVE THIS FOR TABLE SCREEN -->
+
+
+<!--  REMOVE THIS LINE FOR EASY,MED,HARD SCREEN
+    <link rel="stylesheet" href="./">
+    <div class="selection-screen">
+    <h1>Choose Your Difficulty:</h1>
+    <div class="difficulty-options">
+      <div class="option">
+        <img src="https://via.placeholder.com/150x150" alt="Easy">
+        <h2>Easy</h2>
+      </div>
+      <div class="option">
+        <img src="https://via.placeholder.com/150x150" alt="Medium">
+        <h2>Medium</h2>
+      </div>
+      <div class="option">
+        <img src="https://via.placeholder.com/150x150" alt="Hard">
+        <h2>Hard</h2>
+      </div>
+    </div>
+  </div>
+
+CSS \/ \/ \/ FOR EASY,MED,HARD SCREEN
+ .selection-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2c3e50;
+  color: white;
+  height: 100vh;
+}
+
+.selection-screen h1 {
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+.difficulty-options {
+  display: flex;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 50px;
+}
+
+.option img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.option h2 {
+  font-size: 36px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+REMOVE THIS LINE FOR EASY,MED,HARD SCREEN --> 
