@@ -1,3 +1,23 @@
-<div>
-    
-</div>
+    {{!-- <link rel="stylesheet" href="./css/style.css"> --}}
+    <div class="selection-screen">
+    <h2>Choose Your Difficulty:</h1>
+    <div class="difficulty-options">
+      <div class="option">
+        <img src="./images/goblin.png" alt="Easy">
+        <h5>Health: 100</h5>
+        <button class="btn btn-primary btn-lg btn-block start-fight" id="1" health="100">Easy</button>
+      </div>
+      <div class="option">
+        <img src="./images/troll.png" alt="Medium">
+        <h5>Health: 150</h5>
+        <button class="btn btn-primary btn-lg btn-block start-fight" id="2" health="150">Medium</button>
+      </div>
+      <div class="option">
+        <img src="./images/dragon.png" alt="Hard">
+        <h5>Health: 250</h5>
+        <button class="btn btn-primary btn-lg btn-block start-fight" id="3" health="250">Hard</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/fightLogic.js"></script>

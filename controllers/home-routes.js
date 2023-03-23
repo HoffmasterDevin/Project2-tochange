@@ -17,6 +17,7 @@ router.get('/', withAuth, async (req, res) => {
                 exclude: ['password']
             }
         });
+    
         const currentUser = userData.get({ plain: true});
         res.render('home', { currentUser, loggedIn: req.session.loggedIn});
     } catch (err) {
@@ -42,6 +43,23 @@ router.get('/history', withAuth, async (req, res) => {
         const userHistory = historyData.map((project) => project.get({plain: true}));
         //const userHistory = historyData.get({ plain: true});
         res.render('history', {userHistory, loggedIn: req.session.loggedIn});
+    } catch (err) {
+        res.status(500).json(err);
+    };
+});
+
+router.get('/fight', withAuth, async (req, res) => {
+    try {
+        const fightData = await Fight.findOne({
+            where: {user_id: req.session.userId, ongoing: true}
+        });
+// if catch
+        if (!fightData) {
+            res.render('selectFight', {loggedIn: req.session.loggedIn})
+            return;
+        }
+        const ongoingFight = fightData.get({plain: true});
+        res.render('currentFight', {ongoingFight, loggedIn: req.session.loggedIn});
     } catch (err) {
         res.status(500).json(err);
     };
