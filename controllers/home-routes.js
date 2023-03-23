@@ -47,6 +47,23 @@ router.get('/history', withAuth, async (req, res) => {
     };
 });
 
+router.get('/fight', withAuth, async (req, res) => {
+    try {
+        const fightData = await Fight.findOne({
+            where: {user_id: req.session.userId, ongoing: true}
+        });
+// if catch
+        if (!fightData) {
+            res.render('selectFight', {loggedIn: req.session.loggedIn})
+            return;
+        }
+        const ongoingFight = fightData.get({plain: true});
+        res.render('currentFight', {ongoingFight, loggedIn: req.session.loggedIn});
+    } catch (err) {
+        res.status(500).json(err);
+    };
+});
+
 
 
 module.exports = router;

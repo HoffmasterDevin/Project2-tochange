@@ -1,9 +1,4 @@
-import { Howl } from "howler"
 
-
-bells = new Howl({
-  src: './sounds/Copper Bells.mp3'
-});
 
 const getHistory = async () => {
 
