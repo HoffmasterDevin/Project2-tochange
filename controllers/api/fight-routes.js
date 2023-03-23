@@ -1,9 +1,9 @@
 const router = require('express').Router();
-//const withAuth = require('./utils/auth');
+//const withAuth = require('.../utils/auth');
 const { User, Fight } = require('../../models');
 
 
-router.post('/:id/:health', async (req, res) => {
+router.post('/fight/:id/:health', async (req, res) => {
     try {
         const currentUser = req.session.userId
         const dbFightData = await Fight.create({
@@ -17,3 +17,5 @@ router.post('/:id/:health', async (req, res) => {
         res.status(500).json(err);
     };
 });
+
+module.exports = router;

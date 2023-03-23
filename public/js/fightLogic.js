@@ -2,7 +2,7 @@ const startFight = async () => {
     const enemyId = document.activeElement.id
     const enemyHealth = document.activeElement.health
 
-    const response = await fetch('/api/fight/${enemyId}/${enemyHealth}', {
+    const response = await fetch(`/api/fight/${enemyId}/${enemyHealth}`, {
         method: 'POST'
     });
 
@@ -14,5 +14,5 @@ const startFight = async () => {
 };
 
 document
-    .querySelector('.start-fight')
+    .querySelectorAll('.start-fight')
     .addEventListener('click', startFight)
