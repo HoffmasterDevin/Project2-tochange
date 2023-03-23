@@ -17,6 +17,7 @@ router.get('/', withAuth, async (req, res) => {
                 exclude: ['password']
             }
         });
+    
         const currentUser = userData.get({ plain: true});
         res.render('home', { currentUser, loggedIn: req.session.loggedIn});
     } catch (err) {

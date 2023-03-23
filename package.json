@@ -1,7 +1,7 @@
 {
-  "name": "glowing-sniffle",
+  "name": "fantasy-fitness-fighter",
   "version": "1.0.0",
-  "description": "",
+  "description": "A website to track your workouts with a fun fantasy RPG theme.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,9 +10,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justindevs/glowing-sniffle.git"
+    "url": "git+https://github.com/HoffmasterDevin/fantasy-fitness-fighter.git"
   },
-  "author": "Justin Gottschalk",
+  "author": "Devin Hoffmaster",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.0",
@@ -30,7 +30,7 @@
     "eslint": "^7.12.1"
   },
   "bugs": {
-    "url": "https://github.com/justindevs/glowing-sniffle/issues"
+    "url": "https://github.com/HoffmasterDevin/fantasy-fitness-fighter/issues"
   },
-  "homepage": "https://github.com/justindevs/glowing-sniffle#readme"
+  "homepage": "https://github.com/HoffmasterDevin/fantasy-fitness-fighter#readme"
 }

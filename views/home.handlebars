@@ -1,8 +1,7 @@
 
 <div class= "container text-center ">
 
-    <!-- delete mark its just showing current user-->
- <h2> <strong> Welcome back <mark>{{username}}</mark> ready to level up? </strong> </h2>
+ <h2> <strong> Welcome back {{currentUser.name}} ready to level up? </strong> </h2>
 
  
 </div>
@@ -11,9 +10,9 @@
 <div class="mainButtons">
   <div class="row justify-content-center "> 
     <div class="pull-right col-md-6 col-lg-6 ">
-      <button class="btn btn-primary btn-lg btn-block">
+      <button class="btn btn-primary btn-lg btn-block" id="fightButton">
         <span class="btn-overlay">
-      <img src="https://via.placeholder.com/150" alt="start workout image">
+      <img src="./images/fight.png" alt="start workout image">
     </span>
     FIGHT!
       </button>
@@ -24,7 +23,7 @@
     <div class="pull-right col-md-6 col-lg-6">
       <button class="btn btn-primary btn-lg btn-block" id="historyButton">
        <span class="btn-overlay">
-      <img src="https://via.placeholder.com/150" alt="calander image">
+      <img src="./images/history.png" alt="image of an open book">
     </span>
     History
       </button>
@@ -34,4 +33,4 @@
   </div>
 </div>
 
-<script src="./js/history.js"></script>
+<script src="./js/homeButtons.js"></script>
